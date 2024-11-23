@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>D11203</title>
+<style>
+  body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  .navbar {
+    background-color: #333;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    border-bottom: 2px solid #4CAF50;
+  }
+
+  .navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+  }
+
+  .navbar a:hover {
+    background-color: #555;
+  }
+
+  .navbar a.active {
+    background-color: #4CAF50;
+    color: white;
+  }
+
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+
+  .dropdown .dropbtn {
+    cursor: pointer;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 20px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .content {
+    padding: 60px 15px 50px; /* 增加底部padding以留出空间显示页脚 */
+  }
+
+  .footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+  }
+
+  @media screen and (max-width: 600px) {
+    .navbar a, .navbar .icon {
+      display: none;
+    }
+    .navbar a.icon {
+      float: right;
+      display: block;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .navbar.responsive {position: relative;}
+    .navbar.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .navbar.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+    .dropdown.responsive {float: none;}
+    .dropdown.responsive .dropdown-content {position: relative;}
+  }
+</style>
+</head>
+<body>
+
+<div class="navbar" id="myNavbar">
+  <a href="#home" class="active">返回班级主页</a>
+  <a href="javascript:void(0);">东十一 203</a>
+  <a href="#about">一号床 崔子轩</a>
+  <a href="#about">二号床 张家梁</a> 
+  <a href="#about">三号床 牛楚源</a>
+  <a href="#about">四号床 刘润青</a>
+  <a href="#about">五号床 陈嘉豪</a>
+  <div class="dropdown">
+  </div>
+  <a href="javascript:void(0);" class="icon" onclick="toggleNavbar()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+<div class="content">
+<p>
+<img src="image/7A4869D241C1B2AD4394FAEB42E_C7CD42C6_17B7FC.jpg" width="1690" height="840" alt=""/>
+<img src="image/E1D002790444C84F79D25DDF209_322E63AA_12CB9E.jpg" width="1690" height="840" alt=""/> </p>
+</div>
+
+<div class="footer">
+  <p style="font-size: 25px;">图片来源：视觉华科大！</p>
+</div>
+
+<script>
+function toggleNavbar() {
+  var x = document.getElementById("myNavbar");
+  if (x.className === "navbar") {
+    x.className += " responsive";
+  } else {
+    x.className = "navbar";
+  }
+}
+</script>
+
+</body>
+</html>
